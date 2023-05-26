@@ -5,7 +5,8 @@ const initialState = {
   right: 0,
   error: 0,
   input: '',
-  wrong: false
+  active: false, 
+
 };
 
 const reducer = (state = initialState, action) => {
@@ -38,11 +39,11 @@ const reducer = (state = initialState, action) => {
         ...state,
         input: action.payload
       }
-      case "SET_WRONG_TEXT":
-        return{
-          ...state,
-          wrong: true
-        }
+    case "SET_ACTIVE":
+      return{
+        ...state,
+        active: action.payload
+      }
     default:
       return state;
   }

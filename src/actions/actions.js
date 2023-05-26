@@ -27,11 +27,11 @@ export const setInput = (text) => {
     type: "SET_INPUT_TEXT",
     payload: text
   }
-  
 }
-export const setWrong = (bool) => {
+
+export const setActive = (bool) => {
   return {
-    type: "SET_WRONG_TEXT",
+    type: "SET_ACTIVE",
     payload: bool
   }
 }
