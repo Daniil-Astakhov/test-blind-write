@@ -1,0 +1,13 @@
+span {
+    color: #ffffff4c;
+    transition: 0.2s all;
+}
+.correct {
+    border-bottom: 4px solid #6f1aee;
+}
+.correct-color {
+    color: rgb(255, 255, 255); /* цвет для правильно введенного символа */
+}
+.incorrect-color{
+    color: #ee1a1a;
+}
