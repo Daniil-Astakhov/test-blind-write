@@ -1,18 +1,17 @@
 .text__block {
     display: flex;
     position: relative;
-    margin: 0 auto;
+    margin: 10vh auto;
     max-width: 60%;
-    max-height: 70vh;
-    top: 10vh;
+    height: 40vh;
     transition: 0.2s all;
     align-items: center;
     flex-direction: column;
+    
     cursor: pointer;
     &-value {
         font-size: 1.5rem;
         color: #ffffff64;
-        height: 100%;
         span {
             transition: .2s all ease;
             } 

@@ -1,19 +1,19 @@
 import './KeyboardBlock.scss';
-import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
 const KeyboardBlock = () => {
-  const dispatch = useDispatch();
   const text = useSelector((state) => state.text);
   const currIndex = useSelector((state) => state.currIndex);
 
   const keyRow = (keys) => {
     return keys.map((key) => {
-      const isCurrent = currIndex < text.length && key.toLowerCase() === text[currIndex].toLowerCase();
-      return (
-        <span key={key} className={`keyboard_key ${isCurrent ? 'key_active' : ''}`}>
-          {key}
-        </span>
+        const isSpace = key === ' ';
+        const additionalClassName = isSpace ? 'keyboard_space' : '';
+        const isCurrent = currIndex < text.length && key.toLowerCase() === text[currIndex].toLowerCase();
+        return (
+            <span key={key} className={`keyboard_key ${isCurrent ? 'key_active' : ''} ${additionalClassName}`}>
+            {key}
+          </span>
       );
     });
   };

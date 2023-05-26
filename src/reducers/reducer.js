@@ -5,7 +5,9 @@ const initialState = {
   right: 0,
   error: 0,
   input: '',
-  active: false, 
+  active: false,
+  paragraphs: 1,
+  finished: false
 
 };
 
@@ -44,6 +46,18 @@ const reducer = (state = initialState, action) => {
         ...state,
         active: action.payload
       }
+    case "SET_PARAGRAPHS":
+      return{
+        ...state,
+        paragraphs: action.payload
+      }
+    case "SET_CURRINDEX":
+      return{
+        ...state,
+        currIndex: action.payload
+      }
+
+      
     default:
       return state;
   }

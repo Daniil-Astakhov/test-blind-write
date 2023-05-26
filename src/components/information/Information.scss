@@ -1,20 +1,33 @@
 .telemetry {
     display: grid;
-    align-content: center;
+    position: relative;
+    align-content: space-around;
     z-index: 100;
     height: 100vh;
     box-sizing: border-box;
-    width: 6rem;
+    width: 6.5rem;
     position: absolute;
     top: 0;
     left: 0;
     padding: 4em 1.6em 1.6em;
-    background-color: #2F3031;
+    background-color: #3d3d3d45;
     transition: width 0.2s ease;
     border-right: 1px solid #2F3031;
     color: #EBEDF0;
-    position: absolute;
-    &:hover {
-        width: 12rem;
+    z-index: 2;
+    &__error{
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 40px;
+        min-height: 60px;
+        position: relative;
     }
+
+}
+#demo-simple-select-label{
+    color: #EBEDF0;
+    
+}
+.on {
+    width: 14rem;
 }

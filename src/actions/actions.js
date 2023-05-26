@@ -16,10 +16,10 @@ export const setRight = (value) => {
     payload: value
   }
 }
-export const setError = (text) => {
+export const setError = (state) => {
   return {
     type: "SET_ERROR_TEXT",
-    payload: text.error + 1
+    payload: state.error + 1
   }
 }
 export const setInput = (text) => {
@@ -33,5 +33,17 @@ export const setActive = (bool) => {
   return {
     type: "SET_ACTIVE",
     payload: bool
+  }
+}
+export const setParagraphs = (val) => {
+  return {
+    type: "SET_PARAGRAPHS",
+    payload: val
+  }
+}
+export const setCurrIndex = (val) => {
+  return {
+    type: "SET_CURRINDEX",
+    payload: val
   }
 }
