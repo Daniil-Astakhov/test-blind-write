@@ -1,8 +1,9 @@
 import TextService from '../../services/TextService';
 import { useEffect } from 'react';
-import { setText, setError, setRight, setInput, setActive } from '../../actions/actions';
+import { setText, setError, setRight, setInput, setActive, setCurrIndex } from '../../actions/actions';
 import { useDispatch, useSelector } from 'react-redux';
-import Information from '../../information/Information';
+import Information from '../information/Information';
+import KeyboardBlock from '../keyboardBlock/KeyboardBlock';
 import mouse from '../../styles/img/mouse.svg'
 import './InputBlock.scss'
 
@@ -60,13 +61,14 @@ const InputBlock = () => {
       <div onFocus={onFocus}
           onBlur={onBlur} 
           className={`text__block ${active ? '' : 'blurred'}`}>
-        <div className="text__block-value blur">
-          {text.length > 0 ? renderText(): null}
-          <input className="text__block-input" type="text" onChange={textCheck} />
-        </div>
-    </div>
-    <div className={`check_active ${active ? '' : 'active'}`}> <img src={mouse} alt="mose" /> Click to start</div>
-    <Information />
+          <div className="text__block-value blur">
+            {text.length > 0 ? renderText(): null}
+            <input className="text__block-input" type="text" onChange={textCheck} />
+          </div>
+      </div>
+      <div className={`check_active ${active ? '' : 'active'}`}> <img src={mouse} alt="mose" /> Click to start</div>
+      <Information />
+      <KeyboardBlock /> 
     </>
     
   )

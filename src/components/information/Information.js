@@ -11,9 +11,9 @@ const currIndex = useSelector(state => state.currIndex)
 
     return (
         <div className="telemetry">
-            <p>{(text[currIndex] === ' ' ? 'space' : text[currIndex])}</p>
             <p>{'Errors '+ error}</p>
             <p>{'Right '+ right}</p>
+            <p>{'Индекс '+ currIndex}</p>
         </div>
     )
 }
