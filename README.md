@@ -40,10 +40,9 @@ The project structure follows the conventions of Create React App. Here is an ov
 - `src`: This folder contains the application source code. It is where you will write most of your code.
 
   - `components`: This folder contains reusable React components used in the application.
+   - `App.js`: This is the main component where the application is initialized and other components are rendered.
 
   - `styles`: This folder contains SASS files and img for styling the application.
-
-  - `App.js`: This is the main component where the application is initialized and other components are rendered.
 
   - `index.js`: This is the entry point of the application. It renders the `App` component into the root DOM element.
 
