@@ -6,34 +6,38 @@
     margin-top: 80px;
     gap: 10px;
     color: #EBEDF0;
-    
     &_row{
         display: flex;
         justify-content: center;
     }
     &_key {
         display: flex;
-        width: 50px;
-        height: 50px;
+        width: 3vw;
+        aspect-ratio: 1/1;
         border-radius: 5px;
         justify-content: center;
         align-items: center;
-        margin: 0 5px 0px 5px;
+        margin: 0 5px;
         transition: 0.1s all ease-out;
         border: 1px #ffffff solid;
     }
-}
-.keyboard_space {
-    display: flex;
-    width: 400px;
-    height: 50px;
-    border-radius: 5px;
-    justify-content: center;
-    align-items: center;
-    margin: 0 5px 0px 5px;
-    border: 1px #ffffff solid;
+    &_space {
+        display: flex;
+        width: 25vw;
+        aspect-ratio: 10/1;
+        border-radius: 5px;
+        justify-content: center;
+        align-items: center;
+        margin: 0 5px;
+        border: 1px #ffffff solid;
+    }
+    button {
+        background: #ff05057a;
+        color: #f0ebeb;
+    }
 }
 .key_active {
-    color: #1a1919 ;
+    color: #1a1919;
     background: #EBEDF0;
 }
+  

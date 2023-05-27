@@ -22,6 +22,12 @@ export const setError = (state) => {
     payload: state.error + 1
   }
 }
+export const setResetError = (value) => {
+  return {
+    type: "SET_RESET_ERROR_TEXT",
+    payload: value
+  }
+}
 export const setInput = (text) => {
   return {
     type: "SET_INPUT_TEXT",
@@ -47,3 +53,22 @@ export const setCurrIndex = (val) => {
     payload: val
   }
 }
+export const setFinished = (val) => {
+  return {
+    type: "SET_FINISHED",
+    payload: val
+  }
+}
+export const setSpeedSec = (val) => {
+  return {
+    type: "SET_SPEED_SEC",
+    payload: val
+  }
+}
+export const setSpeedMin = (val) => {
+  return {
+    type: "SET_SPEED_MIN",
+    payload: val
+  }
+}
+

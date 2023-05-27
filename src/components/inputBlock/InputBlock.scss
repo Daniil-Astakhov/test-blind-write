@@ -1,13 +1,13 @@
 .text__block {
     display: flex;
+    flex-direction: column;
     position: relative;
-    margin: 10vh auto;
+    margin: 10vh auto 0;
     max-width: 60%;
     height: 40vh;
-    transition: 0.2s all;
+    transition: 0.5s all;
     align-items: center;
-    flex-direction: column;
-    
+    opacity: 0; 
     cursor: pointer;
     &-value {
         font-size: 1.5rem;
@@ -32,7 +32,6 @@
 .correct-color {
     color: rgb(255, 255, 255); /* цвет для правильно введенного символа */
 }
-
 .blurred {
     filter: blur(10px);
 }
@@ -56,4 +55,7 @@
 }
 .active {
     visibility: visible;
+}
+.MuiLinearProgress-root, .MuiLinearProgress-colorPrimary, .MuiLinearProgress-determinate, .css-eglki6-MuiLinearProgress-root {
+    background: #05fb2e
 }

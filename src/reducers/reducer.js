@@ -7,19 +7,18 @@ const initialState = {
   input: '',
   active: false,
   paragraphs: 1,
-  finished: false
-
+  finished: false,
+  simbolsPerSec: 0,
+  simbolsPerMin: 0
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-
     case "SET_TEXT":
       return {
         ...state,
         text: action.payload
       };
-
     case "SET_LENGTH_TEXT":
       return {
         ...state,
@@ -36,11 +35,6 @@ const reducer = (state = initialState, action) => {
         ...state,
         error: action.payload,
       }
-    case "SET_ERROR_TEXT":
-      return{
-        ...state,
-        input: action.payload
-      }
     case "SET_ACTIVE":
       return{
         ...state,
@@ -56,8 +50,26 @@ const reducer = (state = initialState, action) => {
         ...state,
         currIndex: action.payload
       }
-
-      
+    case "SET_FINISHED":
+      return{
+        ...state,
+        finished: action.payload
+      }
+    case "SET_SPEED_SEC":
+      return{
+        ...state,
+        simbolsPerSec: action.payload
+      }
+    case "SET_SPEED_MIN":
+      return{
+        ...state,
+        simbolsPerMin: action.payload
+      }
+    case "SET_RESET_ERROR_TEXT":
+      return{
+        ...state,
+        error: action.payload
+      }
     default:
       return state;
   }

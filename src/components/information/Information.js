@@ -1,6 +1,7 @@
-import { FormControl, InputLabel, Select, MenuItem } from '@mui/material'
+import { FormControl, InputLabel, NativeSelect } from '@mui/material'
 import { useDispatch, useSelector } from 'react-redux';
 import { setParagraphs} from '../../actions/actions';
+import blindFace from '../../styles/img/blindFace.svg'
 import Timer from '../../services/Timer';
 
 import './Information.scss'
@@ -8,32 +9,28 @@ import './Information.scss'
 
 const Information = () => {
     const dispatch = useDispatch();
-    const {error, right, active} = useSelector(state => state)
+    const {error, active} = useSelector(state => state)
 
 
     const changeP = (e) => {
         dispatch(setParagraphs(e.target.value))
     }
-
     return (
         <div className={`telemetry ${!active ? 'on' : ''}`}>
-            <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">{"<P>"}</InputLabel>
-                <Select
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
-                    label="Age"
-                    style={{color: '#fff'}}
-                    onChange={changeP}
+            <img className='logo' src={blindFace} alt="logo" />
+            <FormControl  fullWidth>
+                <InputLabel style={{color: '#EBEDF0', fontSize: '1.3rem'}} variant="standard" htmlFor="uncontrolled-native">
+                    Paragraphs
+                </InputLabel>
+                <NativeSelect
                     defaultValue={1}
-                >
-                    <MenuItem value={1}>1</MenuItem>
-                    <MenuItem value={2}>2</MenuItem>
-                    <MenuItem value={3}>3</MenuItem>
-                    <MenuItem value={4}>4</MenuItem>
-                </Select>
+                    onChange={changeP}
+                    style={{color: '#fff'}}>
+                    <option className='option' value={1}>{'>_< - 1'}</option>
+                    <option className='option' value={2}>{'^_^ - 2'}</option>
+                </NativeSelect>
             </FormControl>
-            <div className='telemetry__error'>{error}{!active? ' Errors' : ''}</div>
+            <div className='telemetry-error'>{error}</div>
             <Timer />
         </div>
     )

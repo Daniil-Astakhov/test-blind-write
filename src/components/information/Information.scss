@@ -1,33 +1,40 @@
 .telemetry {
     display: grid;
-    position: relative;
-    align-content: space-around;
-    z-index: 100;
-    height: 100vh;
-    box-sizing: border-box;
-    width: 6.5rem;
     position: absolute;
     top: 0;
     left: 0;
-    padding: 4em 1.6em 1.6em;
-    background-color: #3d3d3d45;
-    transition: width 0.2s ease;
-    border-right: 1px solid #2F3031;
-    color: #EBEDF0;
+    justify-content: center;
+    align-content: start;
+    grid-template-rows: 150px repeat(3, 100px);
     z-index: 2;
-    &__error{
-        white-space: nowrap;
-        overflow: hidden;
-        font-size: 40px;
-        min-height: 60px;
-        position: relative;
-    }
-
-}
-#demo-simple-select-label{
+    height: 100vh;
+    box-sizing: border-box;
+    width: 6.5rem;
+    padding: 4em 1.6em 1.6em;
+    background-color: #24232369;
+    transition: width 0.2s ease;
+    border-right: 1px solid #2f3031b1;
     color: #EBEDF0;
-    
-}
-.on {
+  
+    &-error {
+      white-space: nowrap;
+      overflow: hidden;
+      font-size: 40px;
+      min-height: 60px;
+      position: relative;
+      color: #f0bdbd;
+    }
+  
+    &:hover {
+      width: 14rem;
+    }
+  }
+  
+  .option {
+    color: #000000a9;
+  }
+  
+  .on {
     width: 14rem;
-}
+  }
+  
