@@ -4,9 +4,10 @@
     top: 0;
     left: 0;
     justify-content: center;
-    align-content: start;
-    grid-template-rows: 20px 0px repeat(3, 100px);
-    row-gap: 50px;
+    justify-items: center;
+    align-content: space-around;
+    grid-template-rows: 20px repeat(4, minmax(10px, 50px));
+    row-gap: 60px;
     z-index: 2;
     height: 100%;
     box-sizing: border-box;
@@ -17,13 +18,15 @@
     border-right: 1px solid #2f3031b1;
     color: #EBEDF0;
     p {
-      font-size: 1.2vw;
+      font-family: 'Noto Sans Mono', monospace;
+      font-size: 1vw;
     }
   
     &-error {
+      font-family: 'Noto Sans Mono', monospace;
       white-space: nowrap;
       overflow: hidden;
-      font-size: 4vw;
+      font-size: 3vw;
       min-height: 60px;
       position: relative;
       color: #f0bdbd;
@@ -63,7 +66,7 @@
 @media (max-width: 968px) {
   .telemetry {
     p {
-      font-size: 2.2vw;
+      font-size: 1.2vw;
     }
   
     &-error {

@@ -1,7 +1,13 @@
 .radio-input {
     display: flex;
+    flex-direction: column;
+    gap: 10px;
     align-items: center;
     justify-content: center;
+    &-descr{
+      font-size: 1vw;
+      font-family: 'Noto Sans Mono', monospace;
+    }
   }
   
   .radio-input input {
@@ -20,12 +26,9 @@
     box-shadow: none;
   }
   
-  
   .radio-input input:checked {
     box-shadow: none;
-  }
-  
-  .radio-input input:checked +  {
     transform: rotate(180deg);
     scale: 1;
-  }
+}
+  

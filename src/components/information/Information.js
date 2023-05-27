@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import MainIcon from '../../castomUI/castomicons/MainIcon';
+import UpperCaseCheck from '../../castomUI/castomCheckbox/UpperCaseCheck';
 import SetParagraph from '../../castomUI/castomInputs/SetParagraph'
 import Timer from '../../services/Timer';
 
@@ -11,8 +12,8 @@ const Information = () => {
     return (
         <div className={`telemetry ${!active ? 'on' : ''}`}>
             <MainIcon />
-            <p>Set paragraphs</p>
             <SetParagraph />
+            <UpperCaseCheck />
             <div className='telemetry-error'>{error}</div>
             <Timer/>
         </div>

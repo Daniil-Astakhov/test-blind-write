@@ -4,12 +4,12 @@ export const setText = (text) => {
     payload: text
   };
 };
-export const setLengthText = (text) => {
+export const setCheckUpperCase = (bool) => {
   return {
-    type: "SET_LENGTH_TEXT",
-    payload: text.length - 1
-  }
-}
+    type: "SET_CHECK_UPPER_CASE",
+    payload: bool
+  };
+};
 export const setRight = (value) => {
   return {
     type: "SET_RIGHT_TEXT",

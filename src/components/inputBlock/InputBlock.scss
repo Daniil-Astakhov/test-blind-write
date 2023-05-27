@@ -36,12 +36,13 @@
 }
 .current {
     border-bottom: 4px solid #6f1aee;
+    animation: .8s current ease-in-out infinite;
 }
 .correct-color {
-    color: rgb(255, 255, 255); /* цвет для правильно введенного символа */
+    color: rgb(255, 255, 255);
 }
 .blurred {
-    filter: blur(10px);
+    filter: blur(5px);
 }
 .check_active {
     display: block;
@@ -79,6 +80,17 @@
     }
     100% {
         border-bottom: 4px  solid #BC3174;
+    }
+}
+@keyframes current {
+    0% {
+        border-bottom: 4px solid #6f1aee;
+    }
+    50% {
+        border-bottom: 4px solid #6f1aee00;
+    }
+    100% {
+        border-bottom: 4px  solid #6f1aee;
     }
 }
 @media (max-width: 767px) {
