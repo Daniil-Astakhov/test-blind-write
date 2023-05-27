@@ -1,5 +1,8 @@
 ### At the moment, there is one bug. The correctness of the first entered character after updating the text is not being checked.
 
+You can see the implementation of the application by following the link: 
+# https://www.hardportfolio.ru/allProject/Blind/.
+
 ## Installation
 
 To get started with this project, follow these steps:
