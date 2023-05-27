@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+### At the moment, there is one bug. The correctness of the first entered character after updating the text is not being checked.
+## And there is no adaptation for mobile devices.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Installation
 
-## Available Scripts
+To get started with this project, follow these steps:
 
-In the project directory, you can run:
+1. Clone this repository to your local machine:
 
-### `npm start`
+   ```
+   git clone <repository-url>
+   ```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. Navigate to the project directory:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+   ```
+   cd <project-directory>
+   ```
 
-### `npm test`
+3. Install the dependencies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```
+   npm install
+   ```
 
-### `npm run build`
+   This will download and install all the required packages and dependencies specified in the `package.json` file.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Start the development server:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```
+   npm start
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   This will start the app in development mode, and you can view it in your browser at [http://localhost:3000](http://localhost:3000). Any changes you make to the source code will automatically reload the app.
 
-### `npm run eject`
+## Folder Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The project structure follows the conventions of Create React App. Here is an overview of the main folders and files:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- `public`: This folder contains the publicly accessible static files, such as HTML, images, and icons.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- `src`: This folder contains the application source code. It is where you will write most of your code.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  - `components`: This folder contains reusable React components used in the application.
+   - `App.js`: This is the main component where the application is initialized and other components are rendered.
 
-## Learn More
+  - `styles`: This folder contains SASS files and img for styling the application.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  - `index.js`: This is the entry point of the application. It renders the `App` component into the root DOM element.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  - `index.scss`: This is the main SCSS file for the application.
 
-### Code Splitting
+  - `reducers`: This folder contains Redux reducers, which are responsible for handling state changes in the application.
+  - `store`: This folder contains the Redux store configuration.
+  - `hooks`: This folder contains custom React hooks that provide reusable functionality across components.
+  - `servises`: This folder contains service modules that handle API requests, data fetching, or other external interactions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Thank you for your attention =)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
-import MainIcon from '../../styles/lables/icons/MainIcon';
-import SetParagraph from '../../styles/lables/radioInputs/SetParagraph';
+import MainIcon from '../../castomUI/castomicons/MainIcon';
+import SetParagraph from '../../castomUI/castomInputs/SetParagraph'
 import Timer from '../../services/Timer';
 
 import './Information.scss'

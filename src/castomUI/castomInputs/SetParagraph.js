@@ -1,6 +1,6 @@
 import './SetParagraph.scss';
 import { useDispatch } from 'react-redux';
-import { setParagraphs} from '../../../actions/actions';
+import { setParagraphs} from '../../actions/actions';
 
 const SetParagraph = () => {
     const dispatch = useDispatch();
