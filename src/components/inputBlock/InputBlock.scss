@@ -81,3 +81,23 @@
         border-bottom: 4px  solid #BC3174;
     }
 }
+@media (max-width: 767px) {
+    .text{
+        .text__block {
+            &-value {
+                font-size: 2.5vw;
+            }
+        }
+    }
+    .check_active {
+        font-size: 1rem;
+        visibility: hidden;
+        img {
+            height: 20px;
+            width: 20px;
+        }
+    }
+    .active {
+        visibility: visible;
+    }
+}

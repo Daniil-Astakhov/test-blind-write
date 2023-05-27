@@ -60,4 +60,9 @@
         transform: rotate(0deg);
     }
 }
+@media (max-width: 568px) {
+    .keyboard {
+        display: none;
+    }
+}
   

@@ -14,7 +14,7 @@ const ResetBtn = () => {
       };
 
     return (
-        <button onClick={resets} class="reset-btn" type="button">
+        <button onClick={resets} className="reset-btn" type="button">
               <strong>Thanks! 
                       Try again</strong>
               <div id="container-stars">
@@ -22,8 +22,8 @@ const ResetBtn = () => {
               </div>
 
               <div id="glow">
-                <div class="circle"></div>
-                <div class="circle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
               </div>
         </button>
     )

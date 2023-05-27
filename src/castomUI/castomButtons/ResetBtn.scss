@@ -166,3 +166,18 @@
       box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     }
   }
+@media (max-width: 767px) {
+  .reset-btn {
+    width: 25vw;
+    aspect-ratio: 4/1;
+
+  }
+  strong {
+    z-index: 2;
+    font-family: 'Avalors Personal Use';
+    font-size: 2vw;
+    letter-spacing: 5px;
+    color: #FFFFFF;
+    text-shadow: 0 0 4px white;
+  }
+}

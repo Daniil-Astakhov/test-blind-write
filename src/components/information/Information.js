@@ -14,7 +14,7 @@ const Information = () => {
             <p>Set paragraphs</p>
             <SetParagraph />
             <div className='telemetry-error'>{error}</div>
-            <Timer />
+            <Timer/>
         </div>
     )
 }

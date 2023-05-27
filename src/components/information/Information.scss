@@ -8,10 +8,10 @@
     grid-template-rows: 20px 0px repeat(3, 100px);
     row-gap: 50px;
     z-index: 2;
-    height: 100vh;
+    height: 100%;
     box-sizing: border-box;
     width: 6.5vw;
-    padding: 1vh 1.6em 1.6em;
+    padding: 40px;
     background-color: #24232369;
     transition: width 0.2s ease;
     border-right: 1px solid #2f3031b1;
@@ -42,5 +42,38 @@
 
 .on {
   width: 14vw;
+}
+
+@media (max-width: 767px) {
+  .telemetry {
+    p {
+      font-size: 2.2vw;
+    }
+  
+    &-error {
+      white-space: nowrap;
+      overflow: hidden;
+      font-size: 4vw;
+      min-height: 60px;
+      position: relative;
+      color: #f0bdbd;
+    }
+  }
+}
+@media (max-width: 968px) {
+  .telemetry {
+    p {
+      font-size: 2.2vw;
+    }
+  
+    &-error {
+      white-space: nowrap;
+      overflow: hidden;
+      font-size: 4vw;
+      min-height: 60px;
+      position: relative;
+      color: #f0bdbd;
+    }
+  }
 }
   

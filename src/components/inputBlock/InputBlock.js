@@ -85,7 +85,9 @@ const InputBlock = () => {
   
 
   return (
-    <div className='text'>
+    <>
+      <Information />
+      <div className='text'>
       {finished ? <div style={{opacity: '1'}} className={`text__block`}>{<ResultBlock />}</div> : 
         <div onFocus={handleFocus}
              onBlur={handleFocus}
@@ -99,10 +101,11 @@ const InputBlock = () => {
         </div>
       }
       <div className={`check_active ${active ? '' : 'active'}`}> <img src={mouse} alt="mose" /> Click to start</div>
-      <Information />
       <LinearProgress variant="determinate" style={styles()} value={(currIndex / text.length) * 100} />
       <KeyboardBlock /> 
-    </div>    
+    </div>  
+    </>
+      
   )
 }
 export default InputBlock;
