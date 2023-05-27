@@ -1,5 +1,4 @@
 ### At the moment, there is one bug. The correctness of the first entered character after updating the text is not being checked.
-## And there is no adaptation for mobile devices.
 
 ## Installation
 
