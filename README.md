@@ -1,3 +1,4 @@
+### At the moment, there is one bug. The correctness of the first entered character after updating the text is not being checked.
 ## Installation
 
 To get started with this project, follow these steps:
