@@ -5,36 +5,42 @@
     left: 0;
     justify-content: center;
     align-content: start;
-    grid-template-rows: 150px repeat(3, 100px);
+    grid-template-rows: 20px 0px repeat(3, 100px);
+    row-gap: 50px;
     z-index: 2;
     height: 100vh;
     box-sizing: border-box;
-    width: 6.5rem;
-    padding: 4em 1.6em 1.6em;
+    width: 6.5vw;
+    padding: 1vh 1.6em 1.6em;
     background-color: #24232369;
     transition: width 0.2s ease;
     border-right: 1px solid #2f3031b1;
     color: #EBEDF0;
+    p {
+      font-size: 1.2vw;
+    }
   
     &-error {
       white-space: nowrap;
       overflow: hidden;
-      font-size: 40px;
+      font-size: 4vw;
       min-height: 60px;
       position: relative;
       color: #f0bdbd;
     }
   
     &:hover {
-      width: 14rem;
+      width: 14vw;
     }
   }
-  
-  .option {
-    color: #000000a9;
-  }
-  
-  .on {
-    width: 14rem;
-  }
+.timer {
+  font-size: 1vw;
+}
+.option {
+  color: #000000a9;
+}
+
+.on {
+  width: 14vw;
+}
   

@@ -1,5 +1,5 @@
 import TextService from '../../services/TextService';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import LinearProgress from '@mui/material/LinearProgress';
 import { setText, setError, setRight, setResetError, setInput, setActive, setCurrIndex, setFinished } from '../../actions/actions';
 import { useDispatch, useSelector } from 'react-redux';
@@ -10,6 +10,7 @@ import mouse from '../../styles/img/mouse.svg'
 import './InputBlock.scss'
 
 const InputBlock = () => {
+  const [inputSimbol, setInputSimbol] = useState('')
   const dispatch = useDispatch();
   const state = useSelector(state => state)
   const {finished, text, currIndex, active, paragraphs } = useSelector(state => ({
@@ -26,10 +27,9 @@ const InputBlock = () => {
     return {color: 'red',
             position: 'relative',
             opacity: '0.5',
-            marginTop: '30px',
-            width: "30%",
-            left: '50%',
-            transform: 'translateX(-50%)',
+            bottom: '50px',
+            width: "20vw",
+            left: '30vw',
             background: '#1a1b1b'}
   }
 
@@ -39,7 +39,7 @@ const InputBlock = () => {
     dispatch(setResetError(0));
     onRequest();
     // eslint-disable-next-line 
-  }, [paragraphs, dispatch]);
+  }, [paragraphs]);
 
   const onRequest = () => {
       getText(paragraphs)
@@ -47,6 +47,7 @@ const InputBlock = () => {
  
   const textCheck = (e) => {
       const value = e.target.value;
+      setInputSimbol(value)
       dispatch(setInput(value));     
       if (value === text[currIndex]) {
         dispatch(setRight(value));
@@ -64,19 +65,27 @@ const InputBlock = () => {
   };
 
   const renderText = () => {
-    return (
-      text.map((item, index) => {
-        const isCurrent = index === currIndex ;
-        const isCorrect = index < currIndex;
-        return (
-          <span key={index} className={`${isCurrent ? 'correct' : ''} ${isCorrect ? 'correct-color' : ''}`}>{item}</span>
-        );
-      })
-    );
+    return text.map((item, index) => {
+      const isCurrent = index === currIndex;
+      const isCorrect = index < currIndex;
+      const isIncorrect = isCurrent && currIndex > 0 && text[currIndex - 1] !== inputSimbol;
+      return (
+        <span
+          key={index}
+          className={`${isCurrent ? 'current' : ''} ${
+            isCorrect ? 'correct-color' : ''
+          } ${isIncorrect ? 'incorrect-color' : ''}`}
+        >
+          {item}
+        </span>
+      );
+    });
   };
+  
+  
 
   return (
-    <>
+    <div className='text'>
       {finished ? <div style={{opacity: '1'}} className={`text__block`}>{<ResultBlock />}</div> : 
         <div onFocus={handleFocus}
              onBlur={handleFocus}
@@ -84,15 +93,16 @@ const InputBlock = () => {
              className={`text__block ${active ? '' : 'blurred'}`}>
           <div className="text__block-value blur">
             {text.length > 0 ? renderText(): null}
-            <LinearProgress variant="determinate" style={styles()} value={(currIndex / text.length) * 100} />
+            
             <input className="text__block-input" type="text" onChange={textCheck} />
           </div>
         </div>
       }
       <div className={`check_active ${active ? '' : 'active'}`}> <img src={mouse} alt="mose" /> Click to start</div>
       <Information />
+      <LinearProgress variant="determinate" style={styles()} value={(currIndex / text.length) * 100} />
       <KeyboardBlock /> 
-    </>    
+    </div>    
   )
 }
 export default InputBlock;

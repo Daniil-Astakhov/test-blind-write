@@ -3,7 +3,6 @@
     position: relative;
     grid-template-columns: 1fr;
     margin: 0 auto;
-    margin-top: 80px;
     gap: 10px;
     color: #EBEDF0;
     &_row{
@@ -14,12 +13,13 @@
         display: flex;
         width: 3vw;
         aspect-ratio: 1/1;
+        font-size: 1.3vw;
         border-radius: 5px;
         justify-content: center;
         align-items: center;
         margin: 0 5px;
         transition: 0.1s all ease-out;
-        border: 1px #ffffff solid;
+        border: 1px #ffffff solid;    
     }
     &_space {
         display: flex;
@@ -32,6 +32,7 @@
         border: 1px #ffffff solid;
     }
     button {
+        cursor: pointer;
         background: #ff05057a;
         color: #f0ebeb;
     }
@@ -39,5 +40,25 @@
 .key_active {
     color: #1a1919;
     background: #EBEDF0;
+}
+.btn {
+    img {
+         width: 2vw;
+         height: 2vw;
+         transition: .7s all;
+    }
+    &:focus {
+        img {
+            animation: rotation 0.2s;
+       }   
+    }    
+}
+@keyframes rotation {
+    0% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
   

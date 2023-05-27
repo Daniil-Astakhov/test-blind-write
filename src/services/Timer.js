@@ -28,7 +28,7 @@ const Timer = () => {
 
     
   return (
-    <div>
+    <div className='timer'>
       <p>{`${charCount.toFixed(2)} symbols/s`}</p>
     </div>
   );
