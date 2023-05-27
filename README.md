@@ -1,4 +1,10 @@
 ### At the moment, there is one bug. The correctness of the first entered character after updating the text is not being checked.
+<<<<<<< HEAD
+=======
+
+You can see the implementation of the application by following the link: 
+# https://www.hardportfolio.ru/allProject/Blind/.
+>>>>>>> f834e3a5d8c3b73c096c5da3b1601d60d1f98283
 
 ## Installation
 
