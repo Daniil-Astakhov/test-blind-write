@@ -48,16 +48,16 @@
     }
     &:focus {
         img {
-            animation: rotation 0.2s;
+            animation: rotation .4s;
        }   
     }    
 }
 @keyframes rotation {
     0% {
-        transform: rotate(180deg);
+        transform: rotate(0);
     }
     100% {
-        transform: rotate(0deg);
+        transform: rotate(360deg);
     }
 }
 @media (max-width: 568px) {

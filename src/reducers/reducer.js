@@ -3,6 +3,7 @@ const initialState = {
   currIndex: 0,
   right: 0,
   error: 0,
+  loading: false,
   input: '',
   active: false,
   paragraphs: 1,
