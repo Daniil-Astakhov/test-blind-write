@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { setCheckUpperCase} from '../../actions/actions';
+import { setCheckUpperCase} from '../../../actions/actions';
 
 import './UpperCaseCheck.scss'
 

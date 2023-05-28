@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { setActive, setParagraphs } from '../../actions/actions';
+import { setActive, setParagraphs } from '../../../actions/actions';
 
 import './ResetBtn.scss'
 

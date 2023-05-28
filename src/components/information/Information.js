@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux';
 import Timer from '../../services/Timer';
-import MainIcon from '../../castomUI/castomicons/MainIcon';
-import UpperCaseCheck from '../../castomUI/castomCheckbox/UpperCaseCheck';
-import SetParagraph from '../../castomUI/castomInputs/SetParagraph'
+import MainIcon from '../castomUI/castomicons/MainIcon';
+import UpperCaseCheck from '../castomUI/castomCheckbox/UpperCaseCheck';
+import SetParagraph from '../castomUI/castomInputs/SetParagraph'
 
 import './Information.scss'
 
