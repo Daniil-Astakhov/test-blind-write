@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 import ResetBtn from '../../castomUI/castomButtons/ResetBtn'
 import './ResultBlock.scss'
 
-
 const ResultBlock = () => {
 
     const {text, error, simbolsPerMin} = useSelector(state => ({

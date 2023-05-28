@@ -41,34 +41,34 @@ export const setActive = (bool) => {
     payload: bool
   }
 }
-export const setParagraphs = (val) => {
+export const setParagraphs = (value) => {
   return {
     type: "SET_PARAGRAPHS",
-    payload: val
+    payload: value
   }
 }
-export const setCurrIndex = (val) => {
+export const setCurrIndex = (value) => {
   return {
     type: "SET_CURRINDEX",
-    payload: val
+    payload: value
   }
 }
-export const setFinished = (val) => {
+export const setFinished = (value) => {
   return {
     type: "SET_FINISHED",
-    payload: val
+    payload: value
   }
 }
-export const setSpeedSec = (val) => {
+export const setSpeedSec = (value) => {
   return {
     type: "SET_SPEED_SEC",
-    payload: val
+    payload: value
   }
 }
-export const setSpeedMin = (val) => {
+export const setSpeedMin = (value) => {
   return {
     type: "SET_SPEED_MIN",
-    payload: val
+    payload: value
   }
 }
 

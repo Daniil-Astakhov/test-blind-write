@@ -8,11 +8,12 @@ const ResetBtn = () => {
     const {paragraphs} = useSelector(state => ({
         paragraphs: state.paragraphs
       }));
-      const resets = () => {
-        const newParagraphs = paragraphs === 1 ? 2 : 1;
-        dispatch(setParagraphs(newParagraphs));
-        dispatch(setActive(false));
-      };
+      
+    const resets = () => {
+      const newParagraphs = paragraphs === 1 ? 2 : 1;
+      dispatch(setParagraphs(newParagraphs));
+      dispatch(setActive(false));
+    };
 
     return (
         <button onClick={resets} className="reset-btn" type="button">

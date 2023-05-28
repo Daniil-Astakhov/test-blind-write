@@ -13,8 +13,6 @@ import {
   useSelector,
   uuidv4
 } from './imports';
-import Information from '../information/Information';
-import KeyboardBlock from '../keyboardBlock/KeyboardBlock';
 import ResultBlock from '../resultBlock/ResultBlock';
 import mouse from '../../styles/img/mouse.svg';
 import './InputBlock.scss';
@@ -43,7 +41,8 @@ const InputBlock = () => {
 
   const onRequest = () => {
       getText(paragraphs)
-          .then(res => dispatch(setText(res[0].split(''))))};
+          .then(res => dispatch(setText(res[0].split(''))))
+  };
  
   const textCheck = (e) => {
     const value = e.target.value;
@@ -77,7 +76,7 @@ const InputBlock = () => {
     });
   };
  
-  const TextBlock = () => {
+  const textBlock = () => {
     return(
       <div onFocus={handleFocus}
              onBlur={handleFocus}
@@ -92,13 +91,13 @@ const InputBlock = () => {
 
   return (
     <>
-      <Information />
+      
       <div className='text'>
-        {finished ? <div className={`text__block`}>{<ResultBlock />}</div> : TextBlock()}
+        {finished ? <div className={`text__block`}>{<ResultBlock />}</div> : textBlock()}
         <div className={`check_active ${active ? '' : 'active'}`}> <img src={mouse} alt="mose" /> Click to start</div>
-        <KeyboardBlock /> 
       </div>  
     </> 
   )
 }
+
 export default InputBlock;

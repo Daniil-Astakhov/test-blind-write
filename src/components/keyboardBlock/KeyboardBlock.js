@@ -6,6 +6,12 @@ import './KeyboardBlock.scss';
 import reset from '../../styles/img/reset.svg'
 
 const KeyboardBlock = () => {
+    const keyLines = [
+        ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '[', ']'],
+        ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ';', "'"],
+        ['Z', 'X', 'C', 'V', 'B', 'N', 'M', ',', '.', '/'],
+        [' ']
+      ];
     const dispatch = useDispatch();
     const {paragraphs, text, currIndex } = useSelector(state => ({
         text: state.text,
@@ -34,18 +40,18 @@ const KeyboardBlock = () => {
 
     return (
         <div className="keyboard">
-            <div className="keyboard_row" data-line='1'>
-                {keyRow(['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '{', '}'])}
+            <div className="keyboard_row" data-line='0'>
+                {keyRow(keyLines[0])}
                 <button onClick={resets} className='keyboard_key btn'><img src={reset} alt="spin"/></button>
             </div>
+            <div className="keyboard_row" data-line='1'>
+                {keyRow(keyLines[1])}
+            </div>
             <div className="keyboard_row" data-line='2'>
-                {keyRow(['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ';', "'"])}
+                {keyRow(keyLines[2])}
             </div>
             <div className="keyboard_row" data-line='3'>
-                {keyRow(['Z', 'X', 'C', 'V', 'B', 'N', 'M', ',', '.', '/'])}
-            </div>
-            <div className="keyboard_row" data-line='3'>
-                {keyRow([' '])}
+                {keyRow(keyLines[3])}
             </div> 
         </div>
     );
