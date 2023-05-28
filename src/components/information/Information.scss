@@ -21,7 +21,6 @@
       font-family: 'Noto Sans Mono', monospace;
       font-size: 1vw;
     }
-  
     &-error {
       font-family: 'Noto Sans Mono', monospace;
       white-space: nowrap;
@@ -32,9 +31,6 @@
       color: #f0bdbd;
     }
   
-    &:hover {
-      width: 14vw;
-    }
   }
 .timer {
   font-size: 1vw;
@@ -43,16 +39,11 @@
   color: #000000a9;
 }
 
-.on {
-  width: 14vw;
-}
-
 @media (max-width: 767px) {
   .telemetry {
     p {
       font-size: 2.2vw;
     }
-  
     &-error {
       white-space: nowrap;
       overflow: hidden;
@@ -68,7 +59,6 @@
     p {
       font-size: 1.2vw;
     }
-  
     &-error {
       white-space: nowrap;
       overflow: hidden;

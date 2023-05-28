@@ -1,7 +1,9 @@
-import './KeyboardBlock.scss';
-import reset from '../../styles/img/reset.svg'
 import { useSelector, useDispatch } from 'react-redux';
 import { setParagraphs, setActive} from '../../actions/actions';
+import { v4 as uuidv4 } from 'uuid';
+
+import './KeyboardBlock.scss';
+import reset from '../../styles/img/reset.svg'
 
 const KeyboardBlock = () => {
     const dispatch = useDispatch();
@@ -11,26 +13,27 @@ const KeyboardBlock = () => {
         paragraphs: state.paragraphs,
     }));
 
-  const keyRow = (keys) => {
-    return keys.map((key) => {
-        const isSpace = key === ' ';
-        const additionalClassName = isSpace ? 'keyboard_space' : '';
-        const isCurrent = currIndex < text.length && key.toLowerCase() === text[currIndex].toLowerCase();
-        return (
-            <span key={key} className={`keyboard_key ${isCurrent ? 'key_active' : ''} ${additionalClassName}`}>
-            {key}
-          </span>
-      );
-    });
-  };
-  const resets = () => {
-    const newParagraphs = paragraphs === 1 ? 2 : 1;
-    dispatch(setParagraphs(newParagraphs));
-    dispatch(setActive(false));   
-  };
+    const keyRow = (keys) => {
+        return keys.map((key) => {
+            const isSpace = key === ' ';
+            const additionalClassName = isSpace ? 'keyboard_space' : '';
+            const isCurrent = currIndex < text.length && key.toLowerCase() === text[currIndex].toLowerCase();
+            return (
+                <span key={uuidv4()} className={`keyboard_key ${isCurrent ? 'key_active' : ''} ${additionalClassName}`}>
+                    {key}
+                </span>
+            );
+        });
+    };
+    
+    const resets = () => {
+        const newParagraphs = paragraphs === 1 ? 2 : 1;
+        dispatch(setParagraphs(newParagraphs));
+        dispatch(setActive(false));   
+    };
+
     return (
         <div className="keyboard">
-        
             <div className="keyboard_row" data-line='1'>
                 {keyRow(['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '{', '}'])}
                 <button onClick={resets} className='keyboard_key btn'><img src={reset} alt="spin"/></button>
